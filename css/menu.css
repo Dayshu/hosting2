@@ -1,0 +1,62 @@
+li {
+    list-style: none;
+    /* 리스트의 앞에 숫자 점 등을 없애기 위해 사용 */
+    margin: 1px;
+    /* 표를 보면 약간 떨어져 있음 그걸 위해 사용 */
+}
+
+
+span {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    display: block;
+    /* 인라인 형식이면 글씨 부분만 파랑색이 되기에 주변 부분도 칠해서 사각형을 만들기 위해
+    block 형식으로 바꿈 */
+    width: 100px;
+    line-height: 50px; 
+    /* height: 50px; */
+    /*height는 span 한줄을 높이를 50으로 정하는 거고
+    line-height는 글씨를 중심으로 텍스트 높이를 위로25 아래로 25로 정하는 식으로 정하기
+    떄문에 글씨나 문단등 혹은 그림 등 표시가 나는 게 보일 경우 line-height을 쓰는 게 낫다.*/
+    text-align: center;
+    /*line-height덕분에 세로 정렬은 됐으나 가로 정렬이 안되서 사용. */
+    opacity: 0.5;
+}
+
+
+
+
+img {
+    display: none;
+    /*사진을 안보이가게 하기위해 사용 */
+    /* display: none;을 사용하면 글씨든 사진이든 그림이든
+     처음부터 없던 거 처럼 여백도 없이 사라진다  */
+    
+}
+
+span:hover {
+    opacity: 1;
+}
+/* 커서를 갇다됐을 경우 글씨를 투명도가 100퍼센트가 되게 할려고 사용 */
+
+span:hover+img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+}
+/* span 글씨부분에 마우스를 가져다 대었을때 바로옆 형제인 img가
+안보이던걸 다시보기 위해 위쪽에 img에서  display: none;으로 안보이던 사진을 
+다시 보이게 하기위해 사용 */
+
+ul {
+    padding: 0px;
+    /*브라우저 키기로 화면 띄우고 f12를 누르면 margin padding등 보이는데 
+    거기서 여백을 0으로 줘서 여백을 없애기 위해 사용*/
+}
+
+body {
+    margin: 0px;
+}
+
